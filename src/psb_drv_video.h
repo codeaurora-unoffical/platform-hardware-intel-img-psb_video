@@ -62,7 +62,6 @@
 #define XID unsigned int
 #define INT16 unsigned int
 #include <cutils/log.h>
-#include <system/window.h>
 #undef  LOG_TAG
 #define LOG_TAG "pvr_drv_video"
 #endif
@@ -440,7 +439,8 @@ struct object_context_s {
      * bytes[1]: profile
      * bytes[2]: tile stride | rotated tile stride
      * bytes[3]: driver_data->protected
-     * bytes[4]: width_in_mb; pass width kernel for VC1 workaround
+     * bytes[4]: width_in_mb; pass width kernel for VC1/H.264 workaround
+     * bytes[5]: height_in_mb; pass width kernel for VC1/H.264 workaround
      */
     uint64_t ctp_type;
 
